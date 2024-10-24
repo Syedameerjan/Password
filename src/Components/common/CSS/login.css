@@ -1,0 +1,19 @@
+.login-pg{
+    background-color: rgb(130, 2, 250);
+    width: auto;
+    height: 200px;
+}
+
+
+.logbutton{background-color: rgb(66, 66, 245);
+    color: whitesmoke;
+    border-radius: 10px;
+    height: 50px;
+    
+}
+
+/* this is for register here */
+
+.rb{
+padding: 20px;
+}

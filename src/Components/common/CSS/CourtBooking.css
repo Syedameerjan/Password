@@ -1,0 +1,165 @@
+.single-court-img-box{
+    height: 60vh;
+    position: relative;
+}
+
+.single-court-img-box img{
+    width:  100%;
+    height:100%;
+}
+.court-name{
+ 
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom:0%;
+    left: 0%;
+    height: 40%;
+    color: white;
+    width: 100%;
+    padding: 3rem 3rem 0 3rem ;
+background: linear-gradient(rgb(236, 225, 225, 0),rgb(20, 18, 18));
+
+}
+
+.court-name button {
+    padding-inline:10px;
+    padding-block:10px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right,  rgb(0, 21, 255, .8), rgb(61, 125, 227 ,.7), rgb(0, 21, 255, .8));
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.rolling-booking{
+    display: flex;
+    flex-direction: row;
+    /* padding-block: 5px; */
+    background-image: linear-gradient(to top,  rgb(0, 21, 255, .8), rgb(61, 125, 227 ,.7));
+    font-size:1.5rem;
+    color: rgb(220, 238, 17);
+}
+.date-picker{
+    padding: 3px;
+    display: flex;
+    flex-wrap: wrap;
+gap: 1rem;
+}
+.date-picker span {
+    
+border: 1px solid #e0e0e0a8;
+background-color: antiquewhite;
+border-radius: 5px;
+margin-left: 10px;
+}
+.date-picker input, input:focus {
+    all: unset;
+    padding:.3rem 1rem .3rem 1rem;
+border: 1px solid #e0e0e0a8;
+border-radius: 10px;
+margin-right: 2px;
+}
+.slotname-container {
+padding: 2rem;
+border: 1px solid #e2c8eaa8;
+border-radius: 5px;
+cursor: pointer;
+}
+
+
+
+    .span-slot{
+        border: 1px solid rgb(245, 10, 10);
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        
+
+    }
+    .cus-dropdown{
+        position: relative;
+        padding: 5px;
+        border: 1px solid black;
+        width: 200px;
+        }
+        .cus-options{
+            position: absolute;
+            width: 100%;
+            top: 35px;
+            left: 0px;
+            min-height: fit-content;
+            z-index: 4;
+            max-height: fit-content;
+            background-color: white;
+            border: 1px solid rgb(35, 14, 14, .6);
+            overflow: hidden;
+        }
+    .cus-options li{
+        list-style: none;
+        padding: 5px;
+        border-bottom: 1px solid black;
+    }
+    .cus-options li:last-child{
+        border-bottom:none
+    
+    }
+
+    .cus-button{
+        align-items: center;
+        padding: 3px;
+        width: 30%;
+        cursor: pointer;
+        
+    }
+    
+    
+        .add-court-timing-modal{
+            
+    width: 100%;
+    min-height: fit-content;
+        }
+
+        .add-court-timing-modal input{
+            all: unset;
+            padding:.3rem 1rem .3rem 1rem;
+        border: 1px solid #e0e0e0a8;
+        border-radius: 5px;
+        color: black;
+
+        }
+        .add-court-timing-modal input:focus{
+            border-color: blue;
+        }
+
+.name-board{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #9fae9369;
+    border-radius: 5px;
+}
+
+
+        .name-adjust{
+            color: blue;
+               
+        }
+        .place-adjust{
+            color: rgba(22, 0, 143, 0.521);
+            
+        }
+
+
+        .selected-time-span {
+            
+            margin: 20px;
+        }
+.bt-span{
+    padding-left: 30%;
+    
+}
+
+
+
+
+
+        
