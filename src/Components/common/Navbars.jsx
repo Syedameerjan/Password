@@ -6,8 +6,9 @@ import {
   MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBCheckbox
 }
 from 'mdb-react-ui-kit';
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 import { BASE_URL } from "./Consatans/constants";
 
 
@@ -40,7 +41,9 @@ function MainNav() {
         console.error(error);
     }
 };
-
+const handleGoBack = () => {
+  navigate(-1); 
+};
 
   return (
    
@@ -60,7 +63,7 @@ function MainNav() {
      <MDBCard className='bg-white my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '500px' }}>
 
        <MDBCardBody className='p-4 w-100 d-flex flex-column' >
-       <button className='logbutton bg-success  ' >
+       <button className='nameboard bg-success  ' >
             Hi {userDetails.fname}{userDetails.lname}
          </button>
          <br />
@@ -72,16 +75,20 @@ function MainNav() {
          <MDBInput wrapperClass='mb-4 w-100' label='Password' id='formControlLg' size="lg" type='password' value={saveData.password} onChange={(e)=>{setSaveData({...saveData,password:e.target.value})}} />
          <MDBInput wrapperClass='mb-4 w-100' label='Purpos / site name' id='formControlLg' size="lg" type='text' value={saveData.purpose} onChange={(e)=>{setSaveData({...saveData,purpose:e.target.value})}} />
 
+
         
          {/* <MDBInput wrapperClass='mb-4 w-100' label='Email address' id='formControlLg' size="lg" type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
         <MDBInput wrapperClass='mb-4 w-100' label='Password' id='formControlLg' size="lg" type='password' value={password} onChange={(e) => setPassword(e.target.value)} /> */}
 
 {/* //         <button className='logbutton' onClick={handleLogin}> save </button> */}
 
-         <button className='logbutton' onClick={handleSaveNew} >
+         <button className='savebutton' onClick={handleSaveNew} >
            save
          </button>
-
+         <br />
+         <button className='backbutton' onClick={handleGoBack} >
+           Go Back
+         </button>
        
 
         
