@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import LogOut from "./LogOut";
+// import {LogOut} from "./LogOut":
 
 function Dashboard() {
   const { userDetails } = useSelector((state) => state.user);
@@ -57,33 +59,46 @@ function Dashboard() {
   return (
     <div style={styles.loginPg}>
       <div style={styles.card} className="m-5">
+
         <button
           style={{
             ...styles.nameboard,
             ...(isHovered ? styles.nameboardHover : {}),
           }}
-          onMouseEnter={() => setIsHovered(true)} 
-          onMouseLeave={() => setIsHovered(false)} 
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           Hi {userDetails.fname} {userDetails.lname}
         </button>
+
+
         <br />
+
+
         <button
           type="button"
-          className="btn btn-success m-5"
+          className="btn btn-success m-3"
+          style={{ width: '150px', height: '50px', fontSize: '18px' }}
           data-mdb-ripple-init
           onClick={handleNavigation1}
         >
           Saved docs
         </button>
+
+
+
         <button
           type="button"
-          className="btn btn-danger m-5"
+          className="btn btn-danger m-3"
+          style={{ width: '150px', height: '50px', fontSize: '18px' }}
           data-mdb-ripple-init
           onClick={handleNavigation}
         >
           New doc
         </button>
+
+        <br />
+        <LogOut />
       </div>
     </div>
   );
