@@ -56,7 +56,7 @@ function Dashboard() {
 
   return (
     <div style={styles.loginPg}>
-      <div style={styles.card}>
+      <div style={styles.card} className="m-5">
         <button
           style={{
             ...styles.nameboard,
