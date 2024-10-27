@@ -58,7 +58,7 @@ function Dashboard() {
 
   return (
     <div style={styles.loginPg}>
-      <div style={styles.card} className="m-5">
+      <div style={styles.card} className="m-3">
 
         <button
           style={{
@@ -77,7 +77,7 @@ function Dashboard() {
 
         <button
           type="button"
-          className="btn btn-success m-3"
+          className="btn btn-success m-5"
           style={{ width: '150px', height: '50px', fontSize: '18px' }}
           data-mdb-ripple-init
           onClick={handleNavigation1}
@@ -89,7 +89,7 @@ function Dashboard() {
 
         <button
           type="button"
-          className="btn btn-danger m-3"
+          className="btn btn-danger m-5"
           style={{ width: '150px', height: '50px', fontSize: '18px' }}
           data-mdb-ripple-init
           onClick={handleNavigation}
