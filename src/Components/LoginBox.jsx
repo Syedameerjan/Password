@@ -13,7 +13,7 @@ import { setUserDetails } from "../Toolkit/userSlice";
 function LoginBox({ setBoxName }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(''); // State for error message
+  const [error, setError] = useState(''); // State for error messages
   const navigate = useNavigate();
   const { userDetails } = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -23,11 +23,14 @@ function LoginBox({ setBoxName }) {
   };
 
   const validateForm = () => {
+    // Check if fields are filled
     if (!email || !password) {
-      setError('Email and password are required!');
+      setError('Both email and password are required.');
       return false;
     }
-    if (!/\S+@\S+\.\S+/.test(email)) {
+    // Email format validation
+    const emailRegex = /\S+@\S+\.\S+/;
+    if (!emailRegex.test(email)) {
       setError('Please enter a valid email address.');
       return false;
     }
@@ -42,10 +45,11 @@ function LoginBox({ setBoxName }) {
 
     try {
       const res = await axios.post(`${BASE_URL}/auth/login`, { email, password });
-      if (res.data.message === "login successful" && res.data.token) {
+      if (res.data.message === "login successfull" && res.data.token) {
         localStorage.setItem('token', res.data.token);
         const parsedToken = parseJwt(res.data.token);
         localStorage.setItem('user', JSON.stringify(parsedToken));
+        console.log(parsedToken);
         dispatch(setUserDetails(parsedToken));
         toastSuccess('Login successful');
         navigate('/home');
@@ -53,7 +57,7 @@ function LoginBox({ setBoxName }) {
         toastError('Invalid credentials');
       }
     } catch (error) {
-      toastError('An error occurred while logging in. Please try again.');
+      toastError('An error occurred during login. Please try again.');
       console.error(error);
     }
   };
@@ -70,7 +74,7 @@ function LoginBox({ setBoxName }) {
 
   return (
     <MDBContainer fluid>
-      <MDBRow className='d-flex justify-content-center align-items-center h-100 login-pg '>
+      <MDBRow className='d-flex justify-content-center align-items-center h-100 login-pg'>
         <MDBCol col='12'>
           <MDBCard className='bg-white my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '500px' }}>
             <MDBCardBody className='p-4 w-100 d-flex flex-column'>
@@ -79,33 +83,17 @@ function LoginBox({ setBoxName }) {
               {/* Display error message */}
               {error && <div className="alert alert-danger">{error}</div>}
 
-              <MDBInput 
-                wrapperClass='mb-4 w-100' 
-                label='Email address' 
-                id='formControlLg' 
-                size="lg" 
-                type='email' 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
-              />
-              <MDBInput 
-                wrapperClass='mb-4 w-100' 
-                label='Password' 
-                id='formControlLg' 
-                size="lg" 
-                type='password' 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
-              />
+              <MDBInput wrapperClass='mb-4 w-100' label='Email address' id='formControlLg' size="lg" type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
+              <MDBInput wrapperClass='mb-4 w-100' label='Password' id='formControlLg' size="lg" type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
 
               <a href="!#">Forgot password?</a>
               <br />
+
               <button className='logbutton' onClick={handleLogin}>
                 Login
               </button>
 
-              <div className="text-center cursor-pointer font-italic rb">
-                Don't have an account? <i onClick={handleSignUp}>Register Here</i>
+              <div className="text-center cursor-pointer font-italic rb">Don't have an account? <i onClick={handleSignUp}>Register Here</i>
               </div>
             </MDBCardBody>
           </MDBCard>
