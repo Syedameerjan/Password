@@ -1,7 +1,10 @@
-.login-pg{
+.login-pg {
     background-color: rgb(130, 2, 250);
-    width: auto;
-    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 
 
@@ -44,6 +47,7 @@
     margin: auto;
     border-radius: 10px;
     height: 50px;
+    border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -63,6 +67,7 @@
     margin: auto;
     border-radius: 10px;
     height: 50px;
+    border: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
