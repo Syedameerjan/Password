@@ -61,6 +61,10 @@ function LoginBox({ setBoxName }) {
       console.error(error);
     }
   };
+  const handleForgotPassword = () => {
+    // Navigate to the Forgot Password page
+    navigate('/forgot-password');
+  };
 
   function parseJwt(token) {
     const base64Url = token.split('.')[1];
@@ -86,7 +90,7 @@ function LoginBox({ setBoxName }) {
               <MDBInput wrapperClass='mb-4 w-100' label='Email address' id='formControlLg' size="lg" type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
               <MDBInput wrapperClass='mb-4 w-100' label='Password' id='formControlLg' size="lg" type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
 
-              <a href="!#">Forgot password?</a>
+              <a onClick={handleForgotPassword}>Forgot password?</a>
               <br />
 
               <button className='logbutton' onClick={handleLogin}>
