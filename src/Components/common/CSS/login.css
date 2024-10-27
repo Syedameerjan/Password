@@ -1,7 +1,7 @@
 .login-pg{
     background-color: rgb(130, 2, 250);
     width: auto;
-    height: 200px;
+    height: auto;
 }
 
 
@@ -11,6 +11,68 @@
     height: 50px;
     
 }
+
+
+.nameboard {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Fully rounded */
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 12rem;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto;
+}
+
+.nameboard:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly increases size on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+
+
+.savebutton {
+    background-color: rgb(66, 66, 245);
+    color: whitesmoke;
+    width: 10rem;
+    margin: auto;
+    border-radius: 10px;
+    height: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.savebutton:hover {
+    background-color: rgb(50, 50, 200); /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slightly increases size on hover */
+    cursor: pointer;
+}
+
+
+
+
+.backbutton {
+    background-color: rgba(255, 0, 0, 0.991);
+    color: whitesmoke;
+    width: 10rem;
+    margin: auto;
+    border-radius: 10px;
+    height: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.backbutton:hover {
+    background-color: rgba(200, 0, 0, 1); /* Darker red */
+    color: white;
+    transform: scale(1.05); /* Slightly enlarges the button */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+}
+
 
 /* this is for register here */
 
