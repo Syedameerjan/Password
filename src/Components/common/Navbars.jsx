@@ -60,7 +60,7 @@ const handleGoBack = () => {
             <Button  variant="outline-success" className="mx-4 p-2 bg-warning rounded-circle">{userDetails.fname}{userDetails.lname}</Button>
              
             </div>  */}
-     <MDBCard className='bg-white my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '500px' }}>
+     <MDBCard className='bg-white mx-auto m-5' style={{ borderRadius: '1rem', maxWidth: '500px' }}>
 
        <MDBCardBody className='p-4 w-100 d-flex flex-column' >
        <button className='nameboard bg-success  ' >
