@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 
 function Dashboard() {
+  const{userDetails}=useSelector(state=>state.user)
   const navigate = useNavigate(); // Hook to programmatically navigate
 
   const handleNavigation = () => {
@@ -18,6 +20,10 @@ function Dashboard() {
         <div col='12'>
             <div className='bg-white my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '100rem' }}>
                 <div className='p-5 w-100 d-flex flex-column'>
+                <button className='logbutton bg-success  ' >
+            Hi {userDetails.fname}{userDetails.lname}
+         </button>
+         <br />
         <button 
           type="button" 
           className="btn btn-success m-5" 
