@@ -5,6 +5,7 @@ import AddNewCourt from './Pages/AddNewCourt';
 import CourtUserViewPage from './Pages/CourtUserViewPage';
 import Admin from './Pages/Admin';
 import Login from './Pages/Login';
+import ForgotPassword from './Pages/ForgotPassword';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -24,6 +25,7 @@ function App() {
       <Route path='/addNewCourt' element={<AddNewCourt/>}/>
       <Route path='/courtUserViewPage/:id' element={<CourtUserViewPage/>} />
      <Route path='/admin' element={<Admin/>}/>
+     <Route path='/forgot-password' element={<ForgotPassword/>}/>
 
       </Routes>
       </BrowserRouter>
