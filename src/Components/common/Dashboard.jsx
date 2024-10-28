@@ -45,6 +45,7 @@ function Dashboard() {
       display: 'inline-block',
       cursor: 'pointer',
       margin: 'auto',
+      marginTop: '20px'
       // Add default state styles
     },
     nameboardHover: {
