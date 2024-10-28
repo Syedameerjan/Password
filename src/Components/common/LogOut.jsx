@@ -28,6 +28,8 @@ function LogOut() {
                         font-size: 16px;
                         transition: background-color 0.3s, transform 0.3s;
                         margin: 30px;
+                        width: 150px;
+                        height: 50px;
                     }
                     .logout-button:hover {
                         background-color: #c82333; /* Darker red on hover */
